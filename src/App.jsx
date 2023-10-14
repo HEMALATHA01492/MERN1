@@ -11,9 +11,12 @@ import PasswordReset from "./components/PasswordReset";
 import Password from "./components/Password";
 
 import Urlshortner from "./components/Urlshortner";
+
 import Home from "./components/Home";
 import Collection from "./HomeComponent/Collection";
 import TodaySuggest from "./HomeComponent/TodaySuggest";
+import History from "./HomeComponent/History";
+import Favorite from "./HomeComponent/Favorite";
 
 function App() {
   const url="http://localhost:3002"
@@ -32,9 +35,13 @@ function App() {
                 <Route path="/password" element={<Password  url={url}/>} />
 
                 <Route path="/UrlShortner" element={<Urlshortner url={url} />} />
+                
                 <Route path="/Home" element={<Home url={url} />} />
                 <Route path="/collection" element={<Collection url={url} />} />
                 <Route path="/todaysuggest" element={<TodaySuggest url={url} />} />
+                <Route path="/history" element={<History url={url} />} />
+                <Route path="/favorite" element={<Favorite url={url} />} />
+
 
 
 

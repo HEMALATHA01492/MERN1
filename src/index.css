@@ -404,6 +404,11 @@ body{
   outline-offset: 2px;
   color: rebeccapurple;
 }
+.top-homeicons{
+  text-decoration: none; 
+  color: rebeccapurple;
+  
+}
 .fav{
   border: none;
   background: whitesmoke;
@@ -430,7 +435,7 @@ body{
 
 }
 
-
+/* Side Menu section */
 .menuBar{
   color: rebeccapurple;
   cursor: pointer;
@@ -877,6 +882,16 @@ body{
   text-align: center;
   padding-bottom: 8px;
 }
+.col-add{
+  color: green;
+}
+.col-add:hover{
+  color: green;
+  scale:1.15;
+  transition-duration: 300ms;
+}
+
+
 .col-main{
   display: flex;
   flex-direction: column;
@@ -967,9 +982,45 @@ body{
  background-color: transparent;
  color: gray;
 }
+
 .col-fav:hover{
   color: orangered;
 }
+.col-fav:active{
+  color: orangered;
+
+}
+.itemfav{
+  border: none;  
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: transparent;
+  color: orangered;
+
+}
+.col-del{
+ border: none;  
+ margin-right: 20px;
+ margin-bottom: 20px;
+ background-color: transparent;
+ color: gray;
+
+}
+.col-del:hover{
+  color: rgb(194, 52, 12);
+}
+.col-edit{
+  border: none;  
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: gray;
+ 
+ }
+ .col-edit:hover{
+   color:blue;
+ }
+
 /* TODAY SUGGESTION SECTION */
 .container{
   margin-top: 30px;
@@ -1010,4 +1061,86 @@ body{
   font-weight: bolder;
   padding-right: 8px;
 }
+.todaySuggest{
+  color: rebeccapurple;
+  font-size: large;
+  font-weight: bold;
+ 
+}
+.today-select{
+  padding: 2px;
+  margin-left: 10px;
+  >label{
+    padding: 2px;
+    margin-left: 5px;
+  }
+  >select{
+    border: 2px solid rebeccapurple;
+    color: rebeccapurple;
+    font-weight: bold;
+    background-color: white;
+    padding: 2px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  
+}
+.btn-generate{
+    border: 1px solid rebeccapurple;
+    background-color: rebeccapurple;
+    font-weight: medium;
+    color: white;
+    border-radius: 15px;
+    padding: 7px;
+    justify-content: center;
+    margin-top: 15px;
+}
+.btn-generate:hover{
+  color: rebeccapurple;
+  background-color: white;
+  font-weight: bold;
+}
+  .today-container{
+  text-align: center;
+  color: rebeccapurple;
+  justify-content: center;
+  align-items: center;
+  
+
+  .card{
+    color: rebeccapurple;
+    padding: 5px;
+    border: none;
+    >h4{
+      font-weight:bolder;
+      color: rgb(122, 28, 215);
+      margin-bottom: 20px;
+    }
+    >h3{
+      font-weight:bolder;
+      margin-bottom: 20px;
+
+    }
+    >p{
+      >span{
+        font-weight:bolder;
+        padding: 5px;
+        color: rgb(167, 73, 211);
+      }
+    }
+  }
+}
+.data-no{
+   margin-top: 30px;
+   color: orangered;
+   >h4{
+    color: red;
+  }
+   
+}
+
+
+
 

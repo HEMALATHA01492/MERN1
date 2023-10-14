@@ -4,7 +4,8 @@ import {
   AiOutlineSearch,
   AiOutlineClose,
   AiOutlineLogout,
-  AiOutlineLogin
+  AiOutlineLogin,
+  AiFillHome
 } from "react-icons/ai";
 import {BiLogOut} from 'react-icons/bi';
 import { BsFillCartFill, BsPerson } from "react-icons/bs";
@@ -27,25 +28,29 @@ function TopNav() {
         </h1>
        
       </div>
-      <div className="searchBar">
+      <Link to="/Home" className="top-homeicons">
+         <AiFillHome size={25} title="Go to Home"/>
+          
+      </Link>
+  
+      {/* <div className="searchBar">
         <AiOutlineSearch size={25} />
         <input
           className="searchBar-input"
           type="text"
           placeholder="search by color"
         />
-      </div>
-      {/* <button className="fav">
-        
-        <MdOutlineFavorite size={25} />
-      </button> */}
-      {/* <Link to="/signin" className="log" onClick={()=>{setLogin(!login);toggle()}}>
-      <span><AiOutlineLogin size={25} /></span>Login
-      </Link> */}
+      </div> */}
 
-      <Link to="/signin" className="logout">
-        Logout <span><AiOutlineLogout size={25} /></span>
+      <Link to="/favorite" className="fav">
+        <MdOutlineFavorite size={25} title="Go to Favorite"/>
+          
       </Link>
+       
+      <Link to="/signin" className="logout">
+        Logout 
+      </Link>
+      
       {sideNav ? (
       <div className="sideBar"
       onClick={() => setSideNav(!sideNav)} 
@@ -76,10 +81,10 @@ function TopNav() {
           Today Suggestions
           </Link>
 
-          <li className="listItem">
+          <Link to='/favorite' className="listItem coll">
           <MdOutlineFavorite size={25} className="icons"/>
            My Favorite
-          </li>
+           </Link>       
 
           <Link to='/collection' className="listItem coll">
           <MdCollections size={25} className="icons"/>
@@ -87,10 +92,10 @@ function TopNav() {
           </Link>       
 
 
-          <li className="listItem">
+          <Link to='/history' className="listItem coll">
           <FaHistory size={25} className="icons"/>
           History
-          </li>
+          </Link>       
 
 
           <li className="listItem">
