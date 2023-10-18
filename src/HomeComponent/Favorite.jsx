@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TopNav from './TopNav';
 import {MdOutlineFavorite} from 'react-icons/md';
-import data from '../Data';
+import data from '../data';
 import {AiOutlineSearch} from "react-icons/ai";
 
 
