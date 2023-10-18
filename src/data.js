@@ -2,13 +2,13 @@ let data=[
     {
         id:1,
         color:"black",
-        image:"../src/images/Daily/black1.jpg",
+        image:"src/images/Daily/black1.jpg",
         fav:true,
     },
     {
         id:2,
         color:"black",
-        image:"../src/images/Daily/black2.jpg",
+        image:"src/images/Daily/black2.jpg",
         fav:true,
 
     },
