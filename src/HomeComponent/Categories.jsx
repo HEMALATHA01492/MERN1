@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import data from '../Data';
+import data from '../data';
 
 function Categories() {
     const [value,setValue] = useState(data);
@@ -12,7 +12,7 @@ function Categories() {
     }
   return (
     <div className='category'>
-        <h1>Our Collections</h1>
+        <h1>My Collections</h1>
         <div className='category-main'>
             <div className='category-sub'>
             <button
@@ -33,15 +33,13 @@ function Categories() {
                 value.map((item) =>(
                     <div key={item.id} className='cat-div'>
                         <img src={item.image} className='cat-img'/>
-
                     </div>
                 ))
             }
-
         </div>
 
     </div>
   )
 }
 
-export default Categories
+export default Categories;

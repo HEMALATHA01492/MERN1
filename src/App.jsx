@@ -10,8 +10,6 @@ import CheckEmail from "./components/CheckEmail";
 import PasswordReset from "./components/PasswordReset";
 import Password from "./components/Password";
 
-import Urlshortner from "./components/Urlshortner";
-
 import Home from "./components/Home";
 import Collection from "./HomeComponent/Collection";
 import TodaySuggest from "./HomeComponent/TodaySuggest";
@@ -34,17 +32,13 @@ function App() {
                 <Route path="/PasswordReset/:id" element={<PasswordReset url={url} />}/>
                 <Route path="/password" element={<Password  url={url}/>} />
 
-                <Route path="/UrlShortner" element={<Urlshortner url={url} />} />
                 
                 <Route path="/Home" element={<Home url={url} />} />
-                <Route path="/collection" element={<Collection url={url} />} />
                 <Route path="/todaysuggest" element={<TodaySuggest url={url} />} />
+
+                <Route path="/collection" element={<Collection url={url} />} />
                 <Route path="/history" element={<History url={url} />} />
                 <Route path="/favorite" element={<Favorite url={url} />} />
-
-
-
-
           </Routes>
       </BrowserRouter>
       

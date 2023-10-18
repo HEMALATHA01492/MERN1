@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
   AiOutlineClose,
-  AiOutlineLogout,
-  AiOutlineLogin,
   AiFillHome
 } from "react-icons/ai";
-import {BiLogOut} from 'react-icons/bi';
-import { BsFillCartFill, BsPerson } from "react-icons/bs";
-import {TbTruckReturn} from 'react-icons/tb'
-import { FaGoogleWallet, FaHistory} from 'react-icons/fa'
+
+import { FaHistory} from 'react-icons/fa'
 import {MdHelp,MdAccountCircle, MdOutlineFavorite,MdCollections,MdSettingsSuggest} from 'react-icons/md'
 import { Link } from "react-router-dom";
 
@@ -44,7 +40,6 @@ function TopNav() {
 
       <Link to="/favorite" className="fav">
         <MdOutlineFavorite size={25} title="Go to Favorite"/>
-          
       </Link>
        
       <Link to="/signin" className="logout">
@@ -71,6 +66,7 @@ function TopNav() {
       <h2 className='first'>Perfect <span className='font-bold'>Picks</span></h2>
       <nav>
         <ul className="unorderList">
+
           <li className="listItem">
           <MdAccountCircle size={26} className="icons"/>
            My Account
@@ -102,13 +98,9 @@ function TopNav() {
           <MdHelp size={25} className="icons"/>
            Help
           </li>
-
         </ul>
       </nav>
-
-
       </div>
-
     </div>
   );
 };

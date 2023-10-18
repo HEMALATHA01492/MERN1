@@ -18,18 +18,35 @@ function History({url}) {
   return (
     <div>
         <TopNav />
-        <div className='card'>
-            {data.length > 0 ?(
-                <ol>
-                    {data.map((item) => 
-                        <ul key={item._id}>
-                          <li>Suggested Color: {item.color} ON {item.createdon}</li> 
-                        </ul>
+        <div className='container history-main'>
+               <table className='table table-hover table-history'>
+                  <thead>
+                    <tr>
+                      <th>Suggested Color</th>
+                      <th>Date</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  {data.length > 0 ?(
+
+                    data.map((item) => 
+                        
+                          <tbody key={item._id}>
+                            <tr>
+                              <td>{item.color}</td>
+                              <td>{item.date}</td>
+                              <td>{item.time}</td>
+
+                            </tr>
+                          </tbody>
                     )
-                    }</ol>
-            ):(<div>
-            <h4>Data History Not Exist</h4>
-            </div>)}
+
+                    
+            ):(<tr>
+            <td colspan="3">Data History Not Exist</td>
+            </tr>)}
+            </table>
+
 
         </div>
 

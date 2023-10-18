@@ -8,10 +8,10 @@ function Featured() {
             "url":"https://images01.nicepagecdn.com/page/11/17/website-template-preview-111767.webp"
         },
         {
-            "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqzHynvopVtWPQujKpQOJ0E42JvOktS8gb3g&usqp=CAU"
+            "url":"https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
         {
-            "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3vsuZ1TeDL_hiP4obOd6bL4Rp5zZnvlSBQ&usqp=CAU"
+            "url":"https://www.quizexpo.com/wp-content/uploads/2021/06/cover-22-850x491.jpg"
         }
     ]
     const [currentIndex, setCurrentIndex] = useState(0)
