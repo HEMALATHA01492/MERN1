@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../dataata'
+import data from '../data'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
