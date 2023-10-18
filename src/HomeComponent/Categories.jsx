@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../data';
 
 function Categories() {
-    const [value,setValue] = useState(data);
+    const [tasks, setTasks] = useState(data);
+
+
+    useEffect(() => {
+      // Load tasks from localStorage on component mount
+      const storedTasks = localStorage.getItem('tasks');
+      if (storedTasks) {
+        setTasks(JSON.parse(storedTasks));
+      }
+    }, []);
+
     const filterCat =(category) =>{
-        setValue(
+        setTasks(
             data.filter((item) =>{
                 return item.color === category;
             })
@@ -16,7 +26,7 @@ function Categories() {
         <div className='category-main'>
             <div className='category-sub'>
             <button
-            onClick={()=>setValue(data)}>All</button>
+            onClick={()=>setTasks(data)}>All</button>
             <button
             onClick={()=>filterCat("pink")}>Pink</button>
             <button
@@ -25,12 +35,16 @@ function Categories() {
              onClick={()=>filterCat("black")}>Black</button>
             <button
              onClick={()=>filterCat("red")}>Red</button>
+            <button
+            onClick={()=>filterCat("blue")}>Blue</button>
+            <button
+            onClick={()=>filterCat("green")}>Green</button>
             </div>
         </div>
 
         <div className='show-category'>
             {
-                value.map((item) =>(
+                tasks.map((item) =>(
                     <div key={item.id} className='cat-div'>
                         <img src={item.image} className='cat-img'/>
                     </div>

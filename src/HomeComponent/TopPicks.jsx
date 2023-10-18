@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../data'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 function TopPicks() {
-  const fav = data.filter((e)=>{
+
+  const [tasks, setTasks] = useState(data);
+
+
+  useEffect(() => {
+    // Load tasks from localStorage on component mount
+    const storedTasks = localStorage.getItem('tasks');
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+  }, []);
+  const fav = tasks.filter((e)=>{
     return e.fav == true
   })
   return (
