@@ -2,7 +2,7 @@ let data=[
     {
         id:1,
         color:"black",
-        image:"../src/images/Daily/black1.jpg",
+        image:"Daily/black1.jpg",
         fav:true,
     },
     {

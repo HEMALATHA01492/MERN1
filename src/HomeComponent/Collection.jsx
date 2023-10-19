@@ -42,7 +42,7 @@ function Collection() {
 
   // Function to create an item
   const addTask = () => {
-    if (task == '') {
+    if (task !== '') {
       const newTask = {
         id: tasks.length + 1, 
         color: task.color.trim(), 
@@ -52,6 +52,7 @@ function Collection() {
   
       setTasks([...tasks, newTask]);
       setTask({ id: '', color: '', image: ''});
+      setCreate(false)
     }
     else(
       console.log("Enter the values")
