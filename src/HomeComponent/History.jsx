@@ -43,7 +43,7 @@ function History({url}) {
 
                     
             ):(<tr>
-            <td colspan="3">Data History Not Exist</td>
+            <td colSpan="3">Data History Not Exist</td>
             </tr>)}
             </table>
 
