@@ -17,7 +17,7 @@ import History from "./HomeComponent/History";
 import Favorite from "./HomeComponent/Favorite";
 
 function App() {
-  const url="http://localhost:3002"
+  const url="https://colorsuggest.onrender.com"
 
   return (
       <BrowserRouter>
